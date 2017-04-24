@@ -17,6 +17,9 @@
 # Other screen sizes and ratios will require more trial-and-error.
 %define pixel_ratio 1.7
 
+Provides: ofono-configs
+Provides: sensord-configs
+
 %include droid-configs-device/droid-configs.inc
 
 # IMPORTANT if you want to comment out any macros in your .spec, delete the %
