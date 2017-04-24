@@ -31,13 +31,14 @@ Requires:
 - qt5-plugin-generic-evdev
 
 - pulseaudio-modules-droid
+- pulseaudio-modules-droid-glue
 # for audio recording to work:
 - qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
 
 # These need to be per-device due to differing backends (fbdev, eglfs, hwc, ..?)
 - qt5-qtwayland-wayland_egl
 - qt5-qpa-hwcomposer-plugin
-- qtscenegraph-adaptation
+#- qtscenegraph-adaptation
 
 # Add GStreamer v1.0 as standard
 - gstreamer1.0
@@ -46,7 +47,7 @@ Requires:
 - gstreamer1.0-plugins-bad
 - nemo-gstreamer1.0-interfaces
 # For devices with droidmedia and gst-droid built, see HADK pdf for more information
-#- gstreamer1.0-droid
+- gstreamer1.0-droid
 
 # This is needed for notification LEDs
 - mce-plugin-libhybris
@@ -81,8 +82,15 @@ Requires:
 # For devices with SD Card
 #- sd-utils
 
+# For devices with working cellular modem:
+- pattern:jolla-sailfish-cellular-apps
+- telepathy-ring
+
 # For devices where test_gps eventually gets a fix:
-#- geoclue-provider-hybris
+- geoclue-provider-hybris
+
+# vibrator
+- qt5-feedback-haptics-ffmemless
 
 Summary: Jolla HW Adaptation bullhead
 
