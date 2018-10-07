@@ -7,6 +7,8 @@
 %define vendor_pretty LG
 %define device_pretty Nexus 5X
 
+%define dcd_path ./
+
 # Community HW adaptations need this
 %define community_adaptation 1
 
@@ -25,4 +27,3 @@ Provides: sensord-configs
 # IMPORTANT if you want to comment out any macros in your .spec, delete the %
 # sign, otherwise they will remain defined! E.g.:
 #define some_macro "I'll not be defined because I don't have % in front"
-
